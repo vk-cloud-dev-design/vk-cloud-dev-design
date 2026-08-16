@@ -1,0 +1,115 @@
+🤖 Automation Tools
+🚀 A quick guide to automation tools and the difference between Imperative and Declarative approaches.
+
+🔄 Imperative vs Declarative
+Approach	Meaning	Examples
+🔨 Imperative	Defines how to perform a task	Bash, Python, PowerShell
+📋 Declarative	Defines what the desired state should be	Terraform, Kubernetes, Ansible
+🔨 Imperative Automation
+"Tell the system HOW to do it."
+
+You provide commands or steps that should be executed in a specific order.
+
+Example — Bash
+mkdir app
+cd app
+touch app.txt
+echo "Hello DevOps" > app.txt
+
+The script tells the system step-by-step what to do.
+
+Common Imperative Tools
+🐧 Bash
+🐍 Python
+💻 PowerShell
+🛠️ Shell Scripts
+📋 Declarative Automation
+
+"Tell the system WHAT you want."
+
+You define the desired end state, and the tool determines how to achieve it.
+
+Example — Terraform
+resource "azurerm_resource_group" "example" {
+  name     = "my-rg"
+  location = "East US"
+}
+
+You declare:
+
+"I want an Azure Resource Group called my-rg."
+
+Terraform determines the actions required to create it.
+
+Example — Kubernetes
+apiVersion: apps/v1
+kind: Deployment
+
+spec:
+  replicas: 3
+
+You declare:
+
+"I want 3 replicas running."
+
+Kubernetes continuously works toward that desired state.
+
+Common Declarative Tools
+🏗️ Terraform
+☸️ Kubernetes
+⚙️ Ansible
+🐳 Docker Compose
+🔄 GitOps / Argo CD
+⚔️ Quick Comparison
+🔨 IMPERATIVE
+     │
+     ▼
+   HOW?
+     │
+     ▼
+Step 1 → Step 2 → Step 3
+     │
+     ▼
+   Result
+
+
+📋 DECLARATIVE
+     │
+     ▼
+   WHAT?
+     │
+     ▼
+Desired State
+     │
+     ▼
+Automation Tool
+     │
+     ▼
+   Result
+🧠 Easy Way to Remember
+
+🔨 Imperative = HOW to do it
+
+📋 Declarative = WHAT you want
+
+🚀 DevOps Automation Stack
+💻 Code
+  ↓
+🔄 Git / GitHub
+  ↓
+🚀 CI/CD
+  ↓
+🤖 Automation
+  ├── Bash / Python
+  ├── Terraform
+  ├── Ansible
+  └── Kubernetes
+  ↓
+☁️ Cloud Infrastructure
+🎯 Key Takeaway
+
+Imperative: You control the steps.
+
+Declarative: You define the desired state.
+
+💡 Modern DevOps commonly combines both approaches for efficient automation.
